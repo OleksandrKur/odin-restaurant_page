@@ -30,4 +30,9 @@ module.exports = {
     aggregateTimeout: 200,
     poll: 1000,
   },
+  resolve: {
+    fallback: {
+        tty: require.resolve('tty-browserify'),
+    },
+},
 };
