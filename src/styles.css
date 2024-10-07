@@ -1,8 +1,42 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
-    background-color: rgb(53, 53, 53);
+    overflow-y: scroll;
+    background-color: #353535;
     color: white;
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+h1{
+    font-size: 42px;
+    margin: 0 0 16px;
+}
+
+h3{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+h5{
+    font-size: 22px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+nav{
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
+    gap: 0;
+}
+
+.logo{
+    margin: 12px 0 24px;
 }
 
 .page-wrapper{
@@ -14,26 +48,20 @@ body{
     font-weight: bold;
     margin: 0;
 }
-.menu{
-    margin: 0 auto;
-    width: 100%;
-}
 button{
     appearance: none;
     display: flex;
-    width: 33.3%;
+    flex-grow: 1;
     height: 60px;
     justify-content: center;
     align-items: center;
-    float: left;
-    border: 1px solid rgb(192, 192, 192);
+    border: 1px solid #c0c0c0;
     margin: 0px;
     font: inherit;
     color: inherit;
     background-color: transparent;
     font-size: 20px;
     cursor: pointer;
-    transition: font-size 0.3s ease; 
 }
 .menu-button:not(:last-of-type){
     border-right: 0px;
@@ -47,26 +75,28 @@ button:hover span{
 }
 
 
-/* button{
-    appearance: none;
-    display: block;
-    float: left;
-    padding: 22px 64px;
-    border: 1px solid rgb(192, 192, 192);
-    margin: 0px;
-    font: inherit;
-    color: inherit;
-    background-color: transparent;
-    cursor: pointer;
+.content{
+    padding: 24px 0;
 }
-.menu-button:not(:last-of-type){
-    border-right: 0px;
-} */
 
-/* button span {
-    display: inline-block;
-    transition: transform 0.9s ease; 
+.meal-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    padding: 28px;
 }
-button:hover span{
-    font-size: 25px;
-} */
+.meal-wrapper:not(:last-child){
+    border-bottom: 1px #c0c0c0 solid;
+}
+.meal-wrapper>*{
+    margin: 0;
+}
+.item-name, .item-description{
+    grid-column: 1/-1;
+    
+}
+
+.item-price{
+    justify-self: end;
+    font-weight: bold;
+}
